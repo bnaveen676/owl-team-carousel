@@ -1,0 +1,177 @@
+@import "../css/owl.carousel.min.css";
+
+/* Using a string */
+
+
+/* css variables */
+
+:root {
+    --textFormat: upperCase;
+    --effect: all .8s linear;
+    --space: .1rem;
+    /* start default theme */
+    --primaryCol: blue;
+    --secondaryCol: yellow;
+    --colorOne: #ffffff;
+    --colorTwo: #000000;
+    --colorThree: #808080;
+    /* end default theme */
+}
+
+
+/* global css */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* start preloader */
+
+.preloadContainer {
+    background: var(--colorTwo);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.preloader {
+    background-image: url(../img/preloader/preloader.png);
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* end preloader */
+
+
+/* star team */
+
+.test {
+    position: relative;
+}
+
+.team h2 {
+    text-align: center;
+    text-transform: var(--textFormat);
+    letter-spacing: var(--space);
+    margin: 0 0 2rem;
+}
+
+.teamImgContainer {
+    height: 10rem;
+    margin: .5rem;
+}
+
+.teamImgContainer img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.owl-dots {
+    text-align: center;
+}
+
+.owl-dot {
+    width: 3rem;
+    height: 1rem;
+    border: 1px solid var(--primaryCol)!important;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin: .5rem;
+}
+
+.owl-dot.active {
+    background: var(--primaryCol)!important;
+}
+
+.owl-stage-outer {
+    height: 10rem;
+}
+
+.owl-prev,
+.owl-next {
+    width: 2rem;
+    height: 2rem;
+    background: var(--primaryCol) !important;
+    margin: .5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 25%;
+}
+
+.owl-next {
+    right: -8px;
+}
+
+.owl-prev {
+    left: -1%;
+}
+
+.owl-prev .svg-inline--fa,
+.owl-next .svg-inline--fa {
+    display: block;
+    color: #fff;
+}
+
+.teamBox {
+    background: orange;
+    padding: 1rem;
+    color: #fff;
+}
+
+.teamBox a {
+    padding: .5rem 2rem;
+    background: blue;
+    color: #fff;
+    border-radius: 8px;
+}
+
+
+/* end team */
+
+
+/* start owl team carousel media queries */
+
+@media(max-width: 991px) {
+    .owl-dot {
+        width: 2rem;
+        height: .5rem;
+    }
+}
+
+@media(max-width: 320px) {
+    .teamImgContainer {
+        margin: 0;
+    }
+}
+
+
+/* end owl team carousel media queries */
